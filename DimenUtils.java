@@ -10,7 +10,7 @@ public class DimenUtils {
         sbForX.append("<?xml version=\"1.0\" encoding=\"utf-8\"?>\n");
         sbForX.append("<resources>");
         for (int i = 1; i <= vValueCount; i++) {
-            sbForX.append("<dimen name=\"width_x_" + i + "\">@dimen/x" + (i * 2) + "</dimen>\n");
+            sbForX.append("<dimen name=\"width_x_" + i + "\">" + i + "dp</dimen>\n");
         }
         sbForX.append("</resources>");
 
@@ -19,7 +19,7 @@ public class DimenUtils {
         sbForY.append("<?xml version=\"1.0\" encoding=\"utf-8\"?>\n");
         sbForY.append("<resources>");
         for (int i = 1; i <= yValueCount; i++) {
-            sbForY.append("<dimen name=\"height_y_" + i + "\">@dimen/y" + (i * 2) + "</dimen>\n");
+            sbForY.append("<dimen name=\"height_y_" + i + "\">" + i + "dp</dimen>\n");
         }
         sbForY.append("</resources>");
 
