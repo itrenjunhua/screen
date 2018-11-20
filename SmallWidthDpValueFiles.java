@@ -14,6 +14,8 @@ import java.util.List;
 public class SmallWidthDpValueFiles {
     // 屏幕匹配的基础dp值。将屏幕切成[BASE_DP]部分，不建议修改，
 	// 建议将 values-sw360dp 文件夹下的 dimens.xml 文件作为默认dimen放入values下，然后 values-sw360dp 文件夹可以不用复制到 res 下
+	// 注意：其实是将基础dp值[BASE_DP]对应的values values-sw[BASE_DP]dp 文件夹下的 dimens.xml 文件作为默认dimen放入values下
+	// 其他的 values-swXXXdp 根据需要复制到res目录下
     private static final double BASE_DP = 360;
     // 定义需要适配的屏幕最小宽度
     private static final String SUPPORT_DIMESION = "360,384,392,400,410,411,480,533,592,600,640,662,720,768,800,811,820,960,961,1024,1280,1365";
@@ -42,6 +44,8 @@ public class SmallWidthDpValueFiles {
     }
 
     public void generate() {
+		// 定义每个 dimens.xml 文件中需要的数值
+
         // 从 -60 取到 -5，间隔 1
         for (double i = -60; i < -5; i++) {
             nameValue.add(i);
